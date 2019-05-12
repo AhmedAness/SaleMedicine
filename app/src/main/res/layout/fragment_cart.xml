@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/WelcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="24dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/BarcodeScan"
+        android:layout_below="@+id/WelcomeText"
+        android:padding="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_width="400dp"
+        android:layout_height="225dp"
+        android:layout_centerHorizontal="true"
+        ></com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ItemsRecycler"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/BarcodeScan"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+</FrameLayout>
